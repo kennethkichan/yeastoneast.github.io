@@ -51,13 +51,37 @@
 
   .quiet { margin-top: 3rem; }
   .quiet .card-label { color: var(--proof-deep); }
+
+  /* Screenshot carousel. CSS scroll-snap only — no JS library, matching the
+     rest of the site's plain construction. Bleeds past .wrap's max-width so
+     the next frame peeks at the edge, the usual cue that there's more to
+     scroll without needing arrows or dots. */
+  .shots {
+    margin: 2.5rem calc(50% - 50vw) 0;
+    padding: 0 calc(50vw - 50% + 1.25rem);
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .shots::-webkit-scrollbar { display: none; }
+  .shots img {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    height: 70vh;
+    max-height: 620px;
+    width: auto;
+    border: 2px solid var(--rule);
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <header class="hero">
-    <p class="kicker">Yeast on East · iPhone</p>
+    <p class="kicker">Yeast on East</p>
     <h1>Tell it when you start.</h1>
     <p class="lede">It works out the rest of the day — every fold, every rest,
     the bake, and what time the loaf comes out.</p>
@@ -73,6 +97,14 @@
   <p class="lede">Most bake timers are a stopwatch with extra steps. This one
   knows that a 24°C kitchen ferments faster than a 19°C one, and rebuilds the
   whole schedule around it.</p>
+
+  <div class="shots">
+    <img src="shots/01-hero.jpg" alt="A running bake: the timer counting down on the current step, dough temperature, and the time the loaf comes out of the oven." width="416" height="900" loading="lazy">
+    <img src="shots/02-temperature.jpg" alt="The full schedule for a bake, every step landed on a real clock time." width="416" height="900" loading="lazy">
+    <img src="shots/03-pantry.jpg" alt="The pantry: two jars, one tracked against a best-before date the baker set, one with no date and no meter." width="416" height="900" loading="lazy">
+    <img src="shots/04-beyond-bread.jpg" alt="The recipe library, with a Beyond Bread section for ferments other than dough." width="416" height="900" loading="lazy">
+    <img src="shots/05-log-dark.jpg" alt="The bake log in dark mode: past bakes with ratings, photos, and notes on what to change next time." width="416" height="900" loading="lazy">
+  </div>
 
   <div class="rows">
 
