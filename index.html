@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yeast on East — a bake timer that plans the day around you</title>
+<meta name="description" content="A sourdough bake timer that builds the whole schedule around the time you start. No account, no subscription, nothing leaves your phone.">
+<meta property="og:title" content="Yeast on East">
+<meta property="og:description" content="Tell it when you start. It works out the rest of the day.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yeastoneast.com">
+<link rel="stylesheet" href="yoe.css">
+<script src="yoe.js"></script>
+<style>
+  .hero { padding-top: 1rem; }
+  .hero h1 { max-width: 12ch; }
+  .hero .lede { max-width: 34ch; color: var(--ink-2); }
+  .actions { margin: 2rem 0 0; }
+  .price {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    margin: 0.85rem 0 0;
+  }
+
+  /* Feature rows: hairline-ruled, mono label above serif claim. Mirrors the
+     app's own row construction rather than inventing a web-only card grid. */
+  .rows { border-top: 2px solid var(--rule); margin-top: 2.5rem; }
+  .row {
+    border-bottom: 1px solid var(--hairline);
+    padding: 1.5rem 0;
+  }
+  .row-label {
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--proof-deep);
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+  .row-title {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin: 0 0 0.4rem;
+  }
+  .row p { margin: 0; color: var(--ink-2); }
+
+  .quiet { margin-top: 3rem; }
+  .quiet .card-label { color: var(--proof-deep); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <p class="kicker">Yeast on East · iPhone</p>
+    <h1>Tell it when you start.</h1>
+    <p class="lede">It works out the rest of the day — every fold, every rest,
+    the bake, and what time the loaf comes out.</p>
+
+    <div class="actions">
+      <a class="cta" href="#">Download on the App Store</a>
+      <p class="price">One-time unlock · No subscription</p>
+    </div>
+  </header>
+
+  <hr class="rule">
+
+  <p class="lede">Most bake timers are a stopwatch with extra steps. This one
+  knows that a 24°C kitchen ferments faster than a 19°C one, and rebuilds the
+  whole schedule around it.</p>
+
+  <div class="rows">
+
+    <div class="row">
+      <span class="row-label">The schedule</span>
+      <p class="row-title">Built around your start time, not a fixed plan</p>
+      <p>Pick a recipe, say when you're starting, and every step lands on a real
+      clock time. Change one thing and the rest moves with it.</p>
+    </div>
+
+    <div class="row">
+      <span class="row-label">Temperature</span>
+      <p class="row-title">A cold kitchen gets a longer bulk</p>
+      <p>Log your dough temperature and the timings adjust. Between 15°C and
+      35°C, because outside that the honest answer is a cold retard, not a
+      number.</p>
+    </div>
+
+    <div class="row">
+      <span class="row-label">Alerts</span>
+      <p class="row-title">A 4am fold wakes you up. A pantry nudge doesn't.</p>
+      <p>Bake alerts ignore quiet hours, because that's the whole point.
+      Everything else respects them. Miss one and the app re-plans the rest
+      instead of pretending it didn't happen.</p>
+    </div>
+
+    <div class="row">
+      <span class="row-label">Not only bread</span>
+      <p class="row-title">Sauerkraut, kimchi, hot sauce, yoghurt</p>
+      <p>Anything that ferments on a schedule. Finished jars go to the pantry
+      with the dates you set — never a shelf life the app invented.</p>
+    </div>
+
+    <div class="row">
+      <span class="row-label">On your phone only</span>
+      <p class="row-title">No account, no server, nothing to sign in to</p>
+      <p>Your recipes and bake log stay on your device. There's no backend to
+      send them to, and no analytics watching you bake.</p>
+    </div>
+
+  </div>
+
+  <div class="card quiet">
+    <span class="card-label">What it won't do</span>
+    <p>It won't tell you whether a ferment is safe to eat. Safety depends on
+    salt, acidity, temperature and submersion, and the app measures none of
+    them. It tracks the dates you enter and nothing more. Trust your own
+    judgement, and when in doubt throw it out.</p>
+  </div>
+
+  <h2>What it costs</h2>
+  <p>Free to use, with room for three of your own recipes. A one-time unlock
+  lifts that to as many as you like. Timers, alerts, the widget, Live Activity,
+  pantry, log and photos are free and stay free.</p>
+  <p>Not a subscription. There's nothing to cancel.</p>
+
+  <div class="shade">
+    <button type="button" data-shade="light" aria-pressed="true">Light</button>
+    <button type="button" data-shade="dark" aria-pressed="false">Dark</button>
+  </div>
+
+  <p class="foot">
+    <a href="privacy.html">Privacy</a> ·
+    <a href="support.html">Support</a> ·
+    <a href="mailto:hello@yeastoneast.com">hello@yeastoneast.com</a>
+  </p>
+
+</div>
+</body>
+</html>
